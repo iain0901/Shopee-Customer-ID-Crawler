@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "蝦皮買家ID提取器",
+  "version": "1.0",
+  "description": "自動提取蝦皮買家ID",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.shopee.tw/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.shopee.tw/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
